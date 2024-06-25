@@ -19,6 +19,9 @@ pip install -r requirements.txt (Instalar Requerimientos)
 
 python manage.py createsuperuser (crea user admin)
 - jesus / 23072000Frost. /jesuscardenas2000@gmail.com
+
+Ctrl + K + C (comentar en visual) 
+Ctrl + K + U (descomentar en visual)
 #######################################################################
 
 
