@@ -43,8 +43,6 @@ BASE_APPS = [
 ]
 
 LOCAL_APPS = [
-    'ClothApp',
-    'Auth',
     'Apps.ProductApp',
 ]
 
