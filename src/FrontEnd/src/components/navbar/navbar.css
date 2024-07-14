@@ -1,7 +1,3 @@
-@font-face {
-    font-family: 'Bree';
-    src: url('/fonts/Navbar_BreeSerif-Regular.ttf') format('truetype');
-}
 
 .navbar-container a {
     color: inherit;

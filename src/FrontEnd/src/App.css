@@ -2,7 +2,13 @@
     font-family: 'MBT';
     src: url('/fonts/Cabecera_zai-Januszowski-Charac.ttf') format('truetype');
 }
-
+@font-face {
+    font-family: 'Bree';
+    src: url('/fonts/Navbar_BreeSerif-Regular.ttf') format('truetype');
+}
+.app-container{
+    margin: 0 auto;
+}
 .header{
     font-family: 'MBT';
     margin: 0 auto;

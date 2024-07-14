@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, useLocation,Navigate } from "react-router-dom";
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
+import Footer from './components/Footer/Footer';
 
 
 const App = () => {
@@ -14,7 +15,9 @@ const App = () => {
           </header>
           <Navbar/>
           <MainContent />
+          <Footer/>
         </div>
+       
       </BrowserRouter>
   );
 };
