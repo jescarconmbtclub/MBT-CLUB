@@ -10,7 +10,6 @@
     position: relative;
     display: inline-block;
     font-weight: bold;
-    font-size: 1.05rem; 
 }
 
 .navbar-container a::before {
