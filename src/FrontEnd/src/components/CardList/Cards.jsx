@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import './Cards.css';
+import './cards.css';
 import { BASE_API_URL } from "../../constants";
 
 const CardList = () => {

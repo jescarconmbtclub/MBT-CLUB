@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, Link,useLocation,Navigate } from "react-router-dom";
 import './App.css';
-import Navbar from './components/Navbar/Navbar';
-import Footer from './components/Footer/Footer';
-import Home from './components/Home/Home';
-import CardList from './components/CardList/Cards';
+import Navbar from './components/Navbar/navbar';
+import Footer from './components/Footer/footer';
+import Home from './components/Home/home';
+import CardList from './components/CardList/cards';
 
 
 const App = () => {
@@ -17,7 +17,6 @@ const App = () => {
               <h2 className="subtitle">Si puedes imaginarlo, podemos hacerlo.</h2>
             </div>
           </Link>
-
           <Navbar/>
           <MainContent />
           <div className='footer'><Footer/></div>
