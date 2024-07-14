@@ -1,4 +1,7 @@
+.navbar-container{
+    margin-bottom: 2%;
 
+}
 .navbar-container a {
     color: inherit;
     text-decoration: none;
@@ -6,6 +9,8 @@
     user-select: none;
     position: relative;
     display: inline-block;
+    font-weight: bold;
+    font-size: 1.05rem; 
 }
 
 .navbar-container a::before {

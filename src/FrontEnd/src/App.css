@@ -8,6 +8,10 @@
 }
 .app-container{
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Mínimo alto de la pantalla completa */
+
 }
 .header{
     font-family: 'MBT';
@@ -18,10 +22,33 @@
     margin: 0 auto;
     text-align: center;
     user-select: none; /* no subrayable estándar */
+    font-size: 3rem; /* 1.5 veces el tamaño de la fuente del elemento raíz */
 
 }
 .subtitle{
     margin: 0 auto;
     text-align: center;
     user-select: none; /* no subrayable estándar */
+    font-size: 1.5rem; /* 1.5 veces el tamaño de la fuente del elemento raíz */
+
 }
+
+
+.content-wrap {
+flex: 1; /* Ocupa todo el espacio disponible entre header y footer */
+display: flex;
+flex-direction: column;
+}
+  
+.main-content {
+flex: 1; /* Ocupa todo el espacio restante */
+}
+  
+/* Estilos para el footer */
+footer {
+background-color: #333;
+color: white;
+text-align: center;
+padding: 10px 0;
+}
+  

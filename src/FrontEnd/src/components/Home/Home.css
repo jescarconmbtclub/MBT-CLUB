@@ -1,0 +1,18 @@
+.home-container {
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+.video-container {
+    max-width: 900px; /* Ajusta el ancho máximo del contenedor del video */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+
+}
+
+.video {
+    width: 100%; /* Ajusta el ancho del video al 100% del contenedor */
+    height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+    box-shadow: 10px 14px 8px rgba(0, 0, 0, 0.685); /* Agrega sombra al contenedor del video */
+
+}

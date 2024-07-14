@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, useLocation,Navigate } from "react-router
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import Home from './components/Home/Home';
 
 
 const App = () => {
@@ -15,7 +16,7 @@ const App = () => {
           </header>
           <Navbar/>
           <MainContent />
-          <Footer/>
+          <div className='footer'><Footer/></div>
         </div>
        
       </BrowserRouter>
@@ -36,8 +37,8 @@ const MainContent = () => {
     <div className="main-content">
       <div>
         <Routes>
-          {/*<Route path="/" element={<CardList/>} /> 
-          <Route path="/clothes/:tipo_prenda/" element={<Cloth_type_filter />} />
+          <Route path="/" element={<Home/>} /> 
+          {/*<Route path="/clothes/:tipo_prenda/" element={<Cloth_type_filter />} />
           <Route path="/clothes-details/:id/" element={<Cloth_details />} />
 
           <Route path="/login" element={<Login/>} />
