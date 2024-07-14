@@ -1,19 +1,23 @@
 import React, { useState } from 'react';
-import { BrowserRouter, Routes, Route, useLocation,Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link,useLocation,Navigate } from "react-router-dom";
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
+import CardList from './components/CardList/Cards';
 
 
 const App = () => {
   return (
       <BrowserRouter>
         <div className="app-container">
-          <header className="header">
-            <h1 className="title">MBT Club</h1>
-            <h2 className="subtitle">Si puedes imaginarlo, podemos hacerlo.</h2>
-          </header>
+          <Link to="/" className="header-link">
+            <div className="header">
+              <h1 className="title">MBT Club</h1>
+              <h2 className="subtitle">Si puedes imaginarlo, podemos hacerlo.</h2>
+            </div>
+          </Link>
+
           <Navbar/>
           <MainContent />
           <div className='footer'><Footer/></div>
@@ -38,6 +42,8 @@ const MainContent = () => {
       <div>
         <Routes>
           <Route path="/" element={<Home/>} /> 
+          <Route path="/productos/:material" element={<CardList/>} />
+
           {/*<Route path="/clothes/:tipo_prenda/" element={<Cloth_type_filter />} />
           <Route path="/clothes-details/:id/" element={<Cloth_details />} />
 

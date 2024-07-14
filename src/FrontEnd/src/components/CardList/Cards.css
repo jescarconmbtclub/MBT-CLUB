@@ -1,0 +1,29 @@
+.cardList-container {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #836645c2;
+    padding: 20px; /* Añade un padding para separar del borde exterior */
+    box-sizing: border-box; /* Incluye el padding en el tamaño total */
+}
+
+.products-list {
+    margin: 10px auto; /* Margen automático arriba y abajo, 10px a los lados */
+    width: 100%; /* Ancho al 100% del contenedor padre */
+    box-sizing: border-box; /* Incluye el borde en el tamaño total */
+    display: flex;
+}
+.product {
+    padding: 10px; /* Espacio interno para separar el contenido del borde */
+}
+
+.product-image {
+    max-width: 100%; /* Máximo ancho del 100% del contenedor */
+    max-height: 150px; /* Máxima altura de 150px */
+}
+.no-products-message {
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: 'Bree';
+  }
+  

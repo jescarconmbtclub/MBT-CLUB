@@ -13,10 +13,13 @@
     min-height: 100vh; /* Mínimo alto de la pantalla completa */
 
 }
+.header-link{
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: inherit;
+}
 .header{
     font-family: 'MBT';
     margin: 0 auto;
-
 }
 .title{
     margin: 0 auto;

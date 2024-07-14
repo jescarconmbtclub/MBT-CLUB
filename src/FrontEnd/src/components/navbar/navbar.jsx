@@ -1,25 +1,26 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css';
 
 export default function Navbar() {
   return (
-      <div className="navbar-container">
-          <div className="navbar">
-            <div className="navbar-pages">
-                <div><a href="#">Metal</a></div>
-                <div><a href="#">Madera</a></div>
-                <div><a href="#">Cuero</a></div>
-                <div><a href="#">PLA</a></div>
-                <div><a href="#">Goma Eva</a></div>
-                <div><a href="#">Cerámica</a></div>
-                <div><a href="#">Cristal</a></div>
-                <div><a href="#">Tejido</a></div>
-                <div><a href="#">Espuma</a></div>
-            </div>
-            <div className="navbar-auth">
-              <a href="#">Inicia Sesión</a>
-            </div>
-          </div>
+    <div className="navbar-container">
+      <div className="navbar">
+        <div className="navbar-pages">
+          <div><Link to="/productos/metal">Metal</Link></div>
+          <div><Link to="/productos/madera">Madera</Link></div>
+          <div><Link to="/productos/cuero">Cuero</Link></div>
+          <div><Link to="/productos/pla">PLA</Link></div>
+          <div><Link to="/productos/goma-eva">Goma Eva</Link></div>
+          <div><Link to="/productos/ceramica">Cerámica</Link></div>
+          <div><Link to="/productos/cristal">Cristal</Link></div>
+          <div><Link to="/productos/tejido">Tejido</Link></div>
+          <div><Link to="/productos/espuma">Espuma</Link></div>
+        </div>
+        <div className="navbar-auth">
+          <Link to="#">Inicia Sesión</Link>
+        </div>
       </div>
+    </div>
   );
 }

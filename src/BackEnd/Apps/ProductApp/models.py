@@ -6,15 +6,21 @@ error_img_url = "https://www.shutterstock.com/image-vector/error-500-page-empty-
 class Vajilla(models.Model):
    
     material_choices = [
-        ('Cerámica', 'Cerámica'),
-        ('Cristal', 'Cristal'),
+        ('metal', 'Metal'),
+        ('madera', 'Madera'),
+        ('pla', 'PLA'),
+        ('goma-eva', 'Goma Eva'),
+        ('ceramica', 'Cerámica'),
+        ('cristal', 'Cristal'),
+        ('tejido', 'Tejido'),
+        ('espuma', 'Espuma'),
     ]
     tipo_taza_choices = [
-        ('Tazas', 'Tazas'),
-        ('Vasos de Chupito', 'Vasos de Chupito'),
-        ('Jarra', 'Jarra'),
-        ('Platos', 'Platos'),
-        ('Vaso Vaquero', 'Vaso Vaquero'),
+        ('tazas', 'Tazas'),
+        ('vasos-de-chupito', 'Vasos de Chupito'),
+        ('jarra', 'Jarra'),
+        ('platos', 'Platos'),
+        ('vaso-vaquero', 'Vaso Vaquero'),
     ]
     id = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=100, blank=True, null=True)
@@ -38,19 +44,19 @@ class Vajilla(models.Model):
 class Medallas(models.Model):
     
     material_choices = [
-        ('Metal', 'Metal'),
-        ('Madera', 'Madera'),
-        ('PLA(3d)', 'PLA(3d)'),
-        ('Goma Eva', 'Goma Eva'),
-        ('Cerámica', 'Cerámica'),
-        ('Cristal', 'Cristal'),
-        ('Tejido', 'Tejido'),
-        ('Espuma', 'Espuma'),
+        ('metal', 'Metal'),
+        ('madera', 'Madera'),
+        ('pla', 'PLA'),
+        ('goma-eva', 'Goma Eva'),
+        ('ceramica', 'Cerámica'),
+        ('cristal', 'Cristal'),
+        ('tejido', 'Tejido'),
+        ('espuma', 'Espuma'),
     ]
    
     sujeccion_medalla_choices = [
-        ('Imperdible', 'Imperdible'),
-        ('Imán', 'Imán'),
+        ('imperdible', 'Imperdible'),
+        ('iman', 'Imán'),
     ]
     id = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=100, blank=True, null=True)
@@ -70,21 +76,22 @@ class Medallas(models.Model):
         verbose_name_plural = 'Medallas'
 
 class Llaveros(models.Model):
+    
     material_choices = [
-        ('Metal', 'Metal'),
-        ('Madera', 'Madera'),
-        ('PLA(3d)', 'PLA(3d)'),
-        ('Goma Eva', 'Goma Eva'),
-        ('Cerámica', 'Cerámica'),
-        ('Cristal', 'Cristal'),
-        ('Tejido', 'Tejido'),
-        ('Espuma', 'Espuma'),
+        ('metal', 'Metal'),
+        ('madera', 'Madera'),
+        ('pla', 'PLA'),
+        ('goma-eva', 'Goma Eva'),
+        ('ceramica', 'Cerámica'),
+        ('cristal', 'Cristal'),
+        ('tejido', 'Tejido'),
+        ('espuma', 'Espuma'),
     ]
    
     sujeccion_llavero_choices = [
-        ('Anilla', 'Anilla'),
-        ('Cadena', 'Cadena'),
-        ('Cierre de Plástico', 'Cierre de Plástico'),
+        ('anilla', 'Anilla'),
+        ('cadena', 'Cadena'),
+        ('cierre-de-plastico', 'Cierre de Plástico'),
     ]
     id = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=100, blank=True, null=True)
@@ -105,14 +112,14 @@ class Llaveros(models.Model):
         
 class Banderines(models.Model):
     material_choices = [
-        ('Metal', 'Metal'),
-        ('Madera', 'Madera'),
-        ('PLA(3d)', 'PLA(3d)'),
-        ('Goma Eva', 'Goma Eva'),
-        ('Cerámica', 'Cerámica'),
-        ('Cristal', 'Cristal'),
-        ('Tejido', 'Tejido'),
-        ('Espuma', 'Espuma'),
+        ('metal', 'Metal'),
+        ('madera', 'Madera'),
+        ('pla', 'PLA'),
+        ('goma-eva', 'Goma Eva'),
+        ('ceramica', 'Cerámica'),
+        ('cristal', 'Cristal'),
+        ('tejido', 'Tejido'),
+        ('espuma', 'Espuma'),
     ]
     id = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=100, blank=True, null=True)
@@ -132,7 +139,7 @@ class ObjetoMagico(models.Model):
     material_choices = [
         ('Metal', 'Metal'),
         ('Madera', 'Madera'),
-        ('PLA(3d)', 'PLA(3d)'),
+        ('PLA', 'PLA'),
         ('Goma Eva', 'Goma Eva'),
         ('Cerámica', 'Cerámica'),
         ('Cristal', 'Cristal'),
@@ -156,14 +163,14 @@ class ObjetoMagico(models.Model):
         verbose_name_plural = 'Objetos Magicos'    
 class Arrojadizos(models.Model):
     material_choices = [
-        ('Metal', 'Metal'),
-        ('Madera', 'Madera'),
-        ('PLA(3d)', 'PLA(3d)'),
-        ('Goma Eva', 'Goma Eva'),
-        ('Cerámica', 'Cerámica'),
-        ('Cristal', 'Cristal'),
-        ('Tejido', 'Tejido'),
-        ('Espuma', 'Espuma'),
+        ('metal', 'Metal'),
+        ('madera', 'Madera'),
+        ('pla', 'PLA'),
+        ('goma-eva', 'Goma Eva'),
+        ('ceramica', 'Cerámica'),
+        ('cristal', 'Cristal'),
+        ('tejido', 'Tejido'),
+        ('espuma', 'Espuma'),
     ]
         
     id = models.AutoField(primary_key=True)
@@ -184,20 +191,20 @@ class Arrojadizos(models.Model):
         
 class Medallon(models.Model):
     material_choices = [
-        ('Metal', 'Metal'),
-        ('Madera', 'Madera'),
-        ('PLA(3d)', 'PLA(3d)'),
-        ('Goma Eva', 'Goma Eva'),
-        ('Cerámica', 'Cerámica'),
-        ('Cristal', 'Cristal'),
-        ('Tejido', 'Tejido'),
-        ('Espuma', 'Espuma'),
+        ('metal', 'Metal'),
+        ('madera', 'Madera'),
+        ('pla', 'PLA'),
+        ('goma-eva', 'Goma Eva'),
+        ('ceramica', 'Cerámica'),
+        ('cristal', 'Cristal'),
+        ('tejido', 'Tejido'),
+        ('espuma', 'Espuma'),
     ]
    
     sujeccion_medallon_choices = [
-        ('Cadena', 'Cadena'),
-        ('Cordón', 'Cordón'),
-        ('Cuero', 'Cuero'),
+        ('cadena', 'Cadena'),
+        ('cordon', 'Cordón'),
+        ('cuero', 'Cuero'),
     ]
     
     id = models.AutoField(primary_key=True)
