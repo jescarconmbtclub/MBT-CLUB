@@ -1,81 +1,73 @@
 from django.contrib import admin
-from django.templatetags.static import static
-from .models import Vajilla, Medallas, Llaveros, Banderines, ObjetoMagico, Arrojadizos, Medallon
 from import_export import resources
 from import_export.admin import ImportExportModelAdmin
+from .models import Vajilla, Medallas, Llaveros, Banderines, ObjetoMagico, Arrojadizos, Medallon
 
+# Define resources for each model for import-export functionality
 class VajillaResource(resources.ModelResource):
     class Meta:
-       model = Vajilla
+        model = Vajilla
 
 class VajillaAdmin(ImportExportModelAdmin, admin.ModelAdmin):
-    search_fields = ['id', 'nombre', 'material', 'tipo_taza'] # Barra de búsqueda por título
-    list_display = ('id', 'nombre', 'material', 'precio', 'precio_rebajado', 'medidas', 'descripcion', 'imagen_url', 'volumen', 'tipo_taza') # Nombra las columnas
+    search_fields = ['id', 'nombre', 'material', 'tipo_taza', 'codigo']  # Agregamos 'codigo' a los campos de búsqueda
+    list_display = ('id', 'codigo', 'nombre', 'material', 'precio', 'precio_rebajado', 'medidas', 'descripcion', 'imagen_url', 'volumen', 'tipo_taza')  # Agregamos 'codigo' antes del 'nombre'
     resource_class = VajillaResource
-
-
 
 class MedallasResource(resources.ModelResource):
     class Meta:
-       model = Medallas
+        model = Medallas
 
 class MedallasAdmin(ImportExportModelAdmin, admin.ModelAdmin):
-    search_fields = ['id', 'nombre', 'material', 'sujeccion_medalla'] # Barra de búsqueda por título
-    list_display = ('id', 'nombre', 'material', 'precio', 'precio_rebajado', 'medidas', 'descripcion', 'imagen_url', 'sujeccion_medalla') # Nombra las columnas
+    search_fields = ['id', 'nombre', 'material', 'sujeccion_medalla', 'codigo']  # Agregamos 'codigo' a los campos de búsqueda
+    list_display = ('id', 'codigo', 'nombre', 'material', 'precio', 'precio_rebajado', 'medidas', 'descripcion', 'imagen_url', 'sujeccion_medalla')  # Agregamos 'codigo' antes del 'nombre'
     resource_class = MedallasResource
-
 
 class LlaverosResource(resources.ModelResource):
     class Meta:
-       model = Llaveros
+        model = Llaveros
 
 class LlaverosAdmin(ImportExportModelAdmin, admin.ModelAdmin):
-    search_fields = ['id', 'nombre', 'material', 'sujeccion_llavero'] # Barra de búsqueda por título
-    list_display = ('id', 'nombre', 'material', 'precio', 'precio_rebajado', 'medidas', 'descripcion', 'imagen_url', 'sujeccion_llavero') # Nombra las columnas
+    search_fields = ['id', 'nombre', 'material', 'sujeccion_llavero', 'codigo']  # Agregamos 'codigo' a los campos de búsqueda
+    list_display = ('id', 'codigo', 'nombre', 'material', 'precio', 'precio_rebajado', 'medidas', 'descripcion', 'imagen_url', 'sujeccion_llavero')  # Agregamos 'codigo' antes del 'nombre'
     resource_class = LlaverosResource
-
-
 
 class BanderinesResource(resources.ModelResource):
     class Meta:
-       model = Banderines
+        model = Banderines
 
 class BanderinesAdmin(ImportExportModelAdmin, admin.ModelAdmin):
-    search_fields = ['id', 'nombre', 'material'] # Barra de búsqueda por título
-    list_display = ('id', 'nombre', 'material', 'precio', 'precio_rebajado', 'medidas', 'descripcion', 'imagen_url') # Nombra las columnas
+    search_fields = ['id', 'nombre', 'material', 'codigo']  # Agregamos 'codigo' a los campos de búsqueda
+    list_display = ('id', 'codigo', 'nombre', 'material', 'precio', 'precio_rebajado', 'medidas', 'descripcion', 'imagen_url')  # Agregamos 'codigo' antes del 'nombre'
     resource_class = BanderinesResource
-
 
 class ObjetoMagicoResource(resources.ModelResource):
     class Meta:
-       model = ObjetoMagico
+        model = ObjetoMagico
 
 class ObjetoMagicoAdmin(ImportExportModelAdmin, admin.ModelAdmin):
-    search_fields = ['id', 'nombre', 'material'] # Barra de búsqueda por título
-    list_display = ('id', 'nombre', 'material', 'precio', 'precio_rebajado', 'medidas', 'descripcion', 'imagen_url') # Nombra las columnas
+    search_fields = ['id', 'nombre', 'material', 'codigo']  # Agregamos 'codigo' a los campos de búsqueda
+    list_display = ('id', 'codigo', 'nombre', 'material', 'precio', 'precio_rebajado', 'medidas', 'descripcion', 'imagen_url')  # Agregamos 'codigo' antes del 'nombre'
     resource_class = ObjetoMagicoResource
-
 
 class ArrojadizosResource(resources.ModelResource):
     class Meta:
-       model = Arrojadizos
+        model = Arrojadizos
 
 class ArrojadizosAdmin(ImportExportModelAdmin, admin.ModelAdmin):
-    search_fields = ['id', 'nombre', 'material'] # Barra de búsqueda por título
-    list_display = ('id', 'nombre', 'material', 'precio', 'precio_rebajado', 'medidas', 'descripcion', 'imagen_url') # Nombra las columnas
+    search_fields = ['id', 'nombre', 'material', 'codigo']  # Agregamos 'codigo' a los campos de búsqueda
+    list_display = ('id', 'codigo', 'nombre', 'material', 'precio', 'precio_rebajado', 'medidas', 'descripcion', 'imagen_url')  # Agregamos 'codigo' antes del 'nombre'
     resource_class = ArrojadizosResource
-
 
 class MedallonResource(resources.ModelResource):
     class Meta:
-       model = Medallon
+        model = Medallon
 
 class MedallonAdmin(ImportExportModelAdmin, admin.ModelAdmin):
-    search_fields = ['id', 'nombre', 'material', 'sujeccion_medallon'] # Barra de búsqueda por título
-    list_display = ('id', 'nombre', 'material', 'precio', 'precio_rebajado', 'medidas', 'descripcion', 'imagen_url', 'sujeccion_medallon') # Nombra las columnas
+    search_fields = ['id', 'nombre', 'material', 'sujeccion_medallon', 'codigo']  # Agregamos 'codigo' a los campos de búsqueda
+    list_display = ('id', 'codigo', 'nombre', 'material', 'precio', 'precio_rebajado', 'medidas', 'descripcion', 'imagen_url', 'sujeccion_medallon')  # Agregamos 'codigo' antes del 'nombre'
     resource_class = MedallonResource
 
-
+# Register models with their respective admin classes
 admin.site.register(Vajilla, VajillaAdmin)
 admin.site.register(Medallas, MedallasAdmin)
 admin.site.register(Llaveros, LlaverosAdmin)

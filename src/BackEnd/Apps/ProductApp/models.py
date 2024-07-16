@@ -22,7 +22,7 @@ class Vajilla(models.Model):
         ('platos', 'Platos'),
         ('vaso-vaquero', 'Vaso Vaquero'),
     ]
-    id = models.AutoField(primary_key=True)
+    codigo = models.CharField(max_length=100, blank=True, null=True)
     nombre = models.CharField(max_length=100, blank=True, null=True)
     material = models.CharField(max_length=50, choices=material_choices, blank=True, null=True)
     precio = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
@@ -58,7 +58,7 @@ class Medallas(models.Model):
         ('imperdible', 'Imperdible'),
         ('iman', 'Imán'),
     ]
-    id = models.AutoField(primary_key=True)
+    codigo = models.CharField(max_length=100, blank=True, null=True)
     nombre = models.CharField(max_length=100, blank=True, null=True)
     material = models.CharField(max_length=50, choices=material_choices, blank=True, null=True)
     precio = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
@@ -93,7 +93,7 @@ class Llaveros(models.Model):
         ('cadena', 'Cadena'),
         ('cierre-de-plastico', 'Cierre de Plástico'),
     ]
-    id = models.AutoField(primary_key=True)
+    codigo = models.CharField(max_length=100, blank=True, null=True)
     nombre = models.CharField(max_length=100, blank=True, null=True)
     material = models.CharField(max_length=50, choices=material_choices, blank=True, null=True)
     precio = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
@@ -121,7 +121,7 @@ class Banderines(models.Model):
         ('tejido', 'Tejido'),
         ('espuma', 'Espuma'),
     ]
-    id = models.AutoField(primary_key=True)
+    codigo = models.CharField(max_length=100, blank=True, null=True)
     nombre = models.CharField(max_length=100, blank=True, null=True)
     material = models.CharField(max_length=50, choices=material_choices, blank=True, null=True)
     precio = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
@@ -146,7 +146,7 @@ class ObjetoMagico(models.Model):
         ('Tejido', 'Tejido'),
         ('Espuma', 'Espuma'),
     ]
-    id = models.AutoField(primary_key=True)
+    codigo = models.CharField(max_length=100, blank=True, null=True)
     nombre = models.CharField(max_length=100, blank=True, null=True)
     material = models.CharField(max_length=50, choices=material_choices, blank=True, null=True)
     precio = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
@@ -173,7 +173,7 @@ class Arrojadizos(models.Model):
         ('espuma', 'Espuma'),
     ]
         
-    id = models.AutoField(primary_key=True)
+    codigo = models.CharField(max_length=100, blank=True, null=True)
     nombre = models.CharField(max_length=100, blank=True, null=True)
     material = models.CharField(max_length=50, choices=material_choices, blank=True, null=True)
     precio = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)
@@ -207,7 +207,7 @@ class Medallon(models.Model):
         ('cuero', 'Cuero'),
     ]
     
-    id = models.AutoField(primary_key=True)
+    codigo = models.CharField(max_length=100, blank=True, null=True)
     nombre = models.CharField(max_length=100, blank=True, null=True)
     material = models.CharField(max_length=50, choices=material_choices, blank=True, null=True)
     precio = models.DecimalField(max_digits=10, decimal_places=2, blank=True, null=True)

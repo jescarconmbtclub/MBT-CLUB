@@ -43,8 +43,8 @@ const MainContent = () => {
       <div>
         <Routes>
           <Route path="/" element={<Home/>} /> 
-          <Route path="/productos/:material" element={<CardList/>} />
-          <Route path="/producto/:id" element={<CardDetail/>} />
+          <Route path="/productos/material/:material" element={<CardList/>} />
+          <Route path="/productos/producto/:codigo" element={<CardDetail/>} />
           
           <Route path="*" element={<NotFound/>}/>
           {/*<Route path="/clothes/:tipo_prenda/" element={<Cloth_type_filter />} />

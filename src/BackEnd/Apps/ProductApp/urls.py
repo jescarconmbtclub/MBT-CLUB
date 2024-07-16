@@ -1,6 +1,6 @@
 # urls.py
 from django.urls import path
-from .views import MaterialGroupedView,VajillaListCreateView, MedallasListCreateView, LlaverosListCreateView, BanderinesListCreateView, ObjetoMagicoListCreateView, ArrojadizosListCreateView, MedallonListCreateView
+from .views import *
 
 urlpatterns = [
     path('vajillas/', VajillaListCreateView.as_view(), name='vajilla-list-create'),
@@ -10,6 +10,9 @@ urlpatterns = [
     path('objeto-magico/', ObjetoMagicoListCreateView.as_view(), name='objeto-magico-list-create'),
     path('arrojadizos/', ArrojadizosListCreateView.as_view(), name='arrojadizos-list-create'),
     path('medallones/', MedallonListCreateView.as_view(), name='medallon-list-create'),
+    
     path('material/', MaterialGroupedView.as_view(), name='material_grouped'),
+    path('producto/', CodeGroupedView.as_view(), name='code_grouped'),
+
 
 ]

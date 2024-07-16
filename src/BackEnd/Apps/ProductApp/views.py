@@ -1,43 +1,54 @@
 # views.py
 from rest_framework import generics
-from .models import Vajilla, Medallas, Llaveros, Banderines, ObjetoMagico, Arrojadizos, Medallon
-from .serializers import VajillaSerializer, MedallasSerializer, LlaverosSerializer, BanderinesSerializer, ObjetoMagicoSerializer, ArrojadizosSerializer, MedallonSerializer
-
-from django.core.exceptions import FieldError
-from itertools import groupby
-from operator import attrgetter
+from .models import *
+from .serializers import *
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-class VajillaListCreateView(generics.ListCreateAPIView):
+
+#------------------------Vajilla------------------------#
+class VajillaListCreateView(generics.ListCreateAPIView): #Create
     queryset = Vajilla.objects.all()
     serializer_class = VajillaSerializer
 
-class MedallasListCreateView(generics.ListCreateAPIView):
+#------------------------Medallas------------------------#
+class MedallasListCreateView(generics.ListCreateAPIView): #Create
     queryset = Medallas.objects.all()
     serializer_class = MedallasSerializer
 
-class LlaverosListCreateView(generics.ListCreateAPIView):
+
+#------------------------Llaveros------------------------#
+class LlaverosListCreateView(generics.ListCreateAPIView): #Create
     queryset = Llaveros.objects.all()
     serializer_class = LlaverosSerializer
 
-class BanderinesListCreateView(generics.ListCreateAPIView):
+
+
+#------------------------Banderines------------------------#
+class BanderinesListCreateView(generics.ListCreateAPIView): #Create
     queryset = Banderines.objects.all()
     serializer_class = BanderinesSerializer
 
-class ObjetoMagicoListCreateView(generics.ListCreateAPIView):
+
+#------------------------ObjetoMagico------------------------#
+class ObjetoMagicoListCreateView(generics.ListCreateAPIView): #Create
     queryset = ObjetoMagico.objects.all()
     serializer_class = ObjetoMagicoSerializer
 
-class ArrojadizosListCreateView(generics.ListCreateAPIView):
+
+#------------------------Arrojadizos------------------------#
+class ArrojadizosListCreateView(generics.ListCreateAPIView): #Create
     queryset = Arrojadizos.objects.all()
     serializer_class = ArrojadizosSerializer
 
-class MedallonListCreateView(generics.ListCreateAPIView):
+
+#------------------------Medallon------------------------#
+class MedallonListCreateView(generics.ListCreateAPIView): #Create
     queryset = Medallon.objects.all()
     serializer_class = MedallonSerializer
 
 
+#------------------------GetProductByMaterial------------------------#
 class MaterialGroupedView(APIView):
     def get(self, request):
         material = request.query_params.get('material', None)
@@ -57,6 +68,32 @@ class MaterialGroupedView(APIView):
 
         for model,serializer in models_and_serializers:
             filtered_objects = model.objects.filter(material=material)
+            serializer = serializer(filtered_objects, many=True)
+            res.append(serializer.data)
+            
+        return Response(res)    
+
+
+#------------------------GetByCode------------------------#
+class CodeGroupedView(APIView):
+    def get(self, request):
+        codigo = request.query_params.get('codigo', None)
+        if not codigo:
+            return Response({'error': 'Debes proporcionar un código.'}, status=400)
+
+        models_and_serializers = [
+            (Vajilla, VajillaSerializer),
+            (Medallas, MedallasSerializer),
+            (Llaveros, LlaverosSerializer),
+            (Banderines, BanderinesSerializer),
+            (ObjetoMagico, ObjetoMagicoSerializer),
+            (Arrojadizos, ArrojadizosSerializer),
+            (Medallon, MedallonSerializer),
+        ]
+        res=[]
+
+        for model,serializer in models_and_serializers:
+            filtered_objects = model.objects.filter(codigo=codigo)
             serializer = serializer(filtered_objects, many=True)
             res.append(serializer.data)
             

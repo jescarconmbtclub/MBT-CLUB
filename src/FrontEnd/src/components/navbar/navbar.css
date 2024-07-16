@@ -30,7 +30,8 @@
 }
 .navbar-container a.active::before {
     opacity: 1; /* Mantener el fondo visible para el enlace activo */
-  }
+}
+
 .navbar {
     margin-top: 2%;
     margin-left: 5%;

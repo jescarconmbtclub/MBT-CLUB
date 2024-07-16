@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import './cards.css';
-import { BASE_API_URL } from "../../constants";
+import { BASE_API_URL } from '../../constants';
 
 const CardList = () => {
   const [products, setProducts] = useState([]);
@@ -48,7 +48,9 @@ const CardList = () => {
           <div key={index} className="product-group">
             {productList.map(product => (
               <div key={product.id} className="product">
-                <img src={product.imagen_url} alt={product.nombre} className="product-image" />
+                <Link to={`/productos/producto/${product.codigo}`}>
+                  <img src={product.imagen_url} alt={product.nombre} className="product-image" />
+                </Link>
               </div>
             ))}
           </div>
