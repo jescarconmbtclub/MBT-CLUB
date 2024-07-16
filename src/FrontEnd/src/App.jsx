@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
 import { BrowserRouter, Routes, Route, Link,useLocation,Navigate } from "react-router-dom";
 import './App.css';
+import Navbar from './components/Navbar/navbar';
 import Footer from './components/Footer/footer';
-import Home from './components/Home/home';
+import Home from './components/Home/homePage';
 import CardList from './components/CardList/cards';
+import CardDetail from './components/CardDetail/detailPage';
+import NotFound from './components/NotFound/notFoundPage';
 
 
 const App = () => {
@@ -16,6 +19,7 @@ const App = () => {
               <h2 className="subtitle">Si puedes imaginarlo, podemos hacerlo.</h2>
             </div>
           </Link>
+          <Navbar/>
           <MainContent />
           <div className='footer'><Footer/></div>
         </div>
@@ -40,7 +44,9 @@ const MainContent = () => {
         <Routes>
           <Route path="/" element={<Home/>} /> 
           <Route path="/productos/:material" element={<CardList/>} />
-
+          <Route path="/producto/:id" element={<CardDetail/>} />
+          
+          <Route path="*" element={<NotFound/>}/>
           {/*<Route path="/clothes/:tipo_prenda/" element={<Cloth_type_filter />} />
           <Route path="/clothes-details/:id/" element={<Cloth_details />} />
 

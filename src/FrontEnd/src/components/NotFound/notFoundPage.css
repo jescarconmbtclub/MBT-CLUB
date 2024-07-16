@@ -1,0 +1,27 @@
+.not-found {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('https://example.com/path-to-your-medieval-background.jpg'); /* Fondo con temática medieval */
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+    font-family: 'Cinzel', serif; /* Fuente con estilo medieval */
+    user-select: none;
+
+}
+  
+  .not-found-title {
+    font-size: 8rem;
+    color: #d4af37; /* Dorado medieval */
+    margin: 0;
+    text-shadow: 2px 2px 5px #000; /* Sombra para resaltar el texto */
+  }
+  
+  .not-found-message {
+    font-size: 2rem;
+    margin: 20px 0;
+    text-shadow: 1px 1px 3px #000;
+  }
+  

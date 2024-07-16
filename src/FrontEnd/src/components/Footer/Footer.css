@@ -1,32 +1,47 @@
 .Footer-container {
-    font-family: 'Bree';
-    background-color: rgba(0, 0, 0, 0.842);
-    color: white;
-    width: 100%; /* Asegura que el footer ocupe todo el ancho disponible */
-    padding: 20px; /* Ajusta el relleno según sea necesario */
-    box-sizing: border-box; /* Incluye el padding y border dentro del ancho total */
-    color: inherit;
-    text-decoration: none;
-    user-select: none;
-    margin-top: 2%;
+  font-family: 'Bree', sans-serif; /* Asegúrate de que la fuente esté disponible */
+  background-color: rgba(0, 0, 0, 0.842);
+  color: white;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  user-select: none;
+  margin-top: 2%;
 }
-  
-  .Footer {
-    display: flex; /* Utiliza flexbox para alinear los elementos internos */
-    justify-content: space-between; /* Espacio uniforme entre los elementos internos */
-    margin-left: 10%;
-    margin-right: 20%;
-  }
-  
-  
-  .Footer-contact div,
-  .Footer-redes div {
-    margin-bottom: 10%; /* Ajusta el margen entre los elementos internos */
-  }
-  
-  .Footer a {
-    color: white; /* Ajusta el color del texto */
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
 
+.Footer {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 20%;
 }
-  
+
+.Footer-contact div,
+.Footer-redes div {
+  margin-bottom: 10%;
+}
+
+.Footer a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  overflow: hidden;
+}
+
+.Footer a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px; /* Posición del subrayado */
+  width: 100%;
+  height: 2px; /* Grosor del subrayado */
+  background-color: white;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-in-out 0.1s; /* Transición y retardo */
+}
+
+.Footer a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
