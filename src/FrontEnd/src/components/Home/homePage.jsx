@@ -11,6 +11,7 @@ export default function Home() {
           Tu navegador no soporta el elemento de video.
         </video>
       </div>
+      <h1 className='eslogan'>Esencia, Sentimiento, Actitud.</h1>
     </div>
   );
 }

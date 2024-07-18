@@ -48,7 +48,7 @@ const CardList = () => {
           <div key={index} className="product-group">
             {productList.map(product => (
               <div key={product.id} className="product">
-                <Link to={`/productos/producto/${product.codigo}`}>
+                <Link to={`/productos/producto/${product.codigo}`}>               
                   <img src={product.imagen_url} alt={product.nombre} className="product-image" />
                 </Link>
               </div>

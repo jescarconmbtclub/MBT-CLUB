@@ -16,3 +16,9 @@
     box-shadow: 10px 14px 8px rgba(0, 0, 0, 0.685); /* Agrega sombra al contenedor del video */
 
 }
+.eslogan{
+    text-align: center;
+    font-family: 'MBT';
+    user-select: none;
+
+}
