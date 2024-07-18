@@ -3,25 +3,23 @@ import { BrowserRouter, Routes, Route, Link,useLocation,Navigate } from "react-r
 import './App.css';
 import Navbar from './components/Navbar/navbar';
 import Footer from './components/Footer/footer';
-import Home from './components/Home/homePage';
+import Home from './components/Pages/Home/homePage';
 import CardList from './components/CardList/cards';
 import CardDetail from './components/CardDetail/detailPage';
 import NotFound from './components/NotFound/notFoundPage';
+import Header from './components/Header/header';
+import Drop from './components/Pages/Drops/drop';
+import Sticker from './components/Pages/Stickers/sticker';
 
 
 const App = () => {
   return (
       <BrowserRouter>
         <div className="app-container">
-          <Link to="/" className="header-link">
-            <div className="header">
-              <h1 className="title">MBT Club</h1>
-              <h2 className="subtitle">Si puedes imaginarlo, podemos hacerlo.</h2>
-            </div>
-          </Link>
+          <Header/>
           <Navbar/>
           <MainContent />
-          <div className='footer'><Footer/></div>
+          <Footer/>
         </div>
        
       </BrowserRouter>
@@ -44,8 +42,11 @@ const MainContent = () => {
         <Routes>
           <Route path="/" element={<Home/>} /> 
           <Route path="/productos/material/:material" element={<CardList/>} />
+          <Route path="/productos/drops/" element={<Drop/>} />
+          <Route path="/productos/stickers/" element={<Sticker/>} />
+
           <Route path="/productos/producto/:codigo" element={<CardDetail/>} />
-          
+         
           <Route path="*" element={<NotFound/>}/>
           {/*<Route path="/clothes/:tipo_prenda/" element={<Cloth_type_filter />} />
           <Route path="/clothes-details/:id/" element={<Cloth_details />} />

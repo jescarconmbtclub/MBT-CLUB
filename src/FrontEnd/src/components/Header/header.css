@@ -1,0 +1,83 @@
+.Header-container {
+    /* Puede que quieras agregar estilos generales para el contenedor aquí */
+}
+
+.header-link {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: inherit;
+    display: flex; /* Alinea la imagen y el texto horizontalmente */
+    margin: 0 auto;
+    align-items: center; /* Centra verticalmente el contenido */
+}
+
+.header-logo {
+    width: 20%; /* Ajusta el tamaño del contenedor de la imagen según sea necesario */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+    margin-left: 20%;
+}
+
+.logo-img {
+    object-fit: cover; /* Asegura que la imagen cubra todo el contenedor */
+    width: 100%;
+    height: 100%;
+}
+
+.header-text {
+    font-family: 'MBT';
+}
+
+.title {
+    margin: 0 auto;
+    text-align: center;
+    user-select: none; /* no subrayable estándar */
+    font-size: 3rem; /* 1.5 veces el tamaño de la fuente del elemento raíz */
+}
+
+.subtitle {
+    margin: 0 auto;
+    text-align: center;
+    user-select: none; /* no subrayable estándar */
+    font-size: 1.5rem; /* 1.5 veces el tamaño de la fuente del elemento raíz */
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .header-logo {
+        width: 35%; /* Ajusta el tamaño del contenedor de la imagen */
+        margin-left: 1%;
+    }
+    .title {
+        font-size: 2.5rem; /* Ajusta el tamaño de la fuente */
+    }
+    .subtitle {
+        font-size: 1.25rem; /* Ajusta el tamaño de la fuente */
+    }
+}
+
+@media (max-width: 768px) {
+
+    .header-logo {
+        width: 50%; /* Ajusta el tamaño del contenedor de la imagen */
+    }
+    .header-text{
+        margin-right: 15%;
+    }
+    .title {
+        font-size: 2rem; /* Ajusta el tamaño de la fuente */
+    }
+    .subtitle {
+        font-size: 1rem; /* Ajusta el tamaño de la fuente */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-logo {
+        width: 70%; /* Ajusta el tamaño del contenedor de la imagen */
+    }
+    .title {
+        font-size: 1.5rem; /* Ajusta el tamaño de la fuente */
+    }
+    .subtitle {
+        font-size: 0.875rem; /* Ajusta el tamaño de la fuente */
+    }
+}
