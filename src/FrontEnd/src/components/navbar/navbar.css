@@ -17,18 +17,21 @@
     justify-content: space-around;
     font-weight: bold;
     font-family: 'Bree'; /*Bree*/
+    user-select: none;
+
 }
 
 .navbar-auth {
   width: 20%;
   text-align: center;
+  user-select: none;
+
 }
 
 .navbar-container a {
     color: inherit;
     text-decoration: none;
     font-family: 'Bree'; /* Bree */
-    user-select: none;
     font-weight: bold;
     position: relative;
   
